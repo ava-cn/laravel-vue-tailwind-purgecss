@@ -4,6 +4,10 @@ All notable changes to `laravel-vue-tailwind-purgecss` will be documented in thi
 
 ## 0.3.1
 
+- change readme support laravel
+
+## 0.3.0
+
 - change package and vendor name
 - sass support
 

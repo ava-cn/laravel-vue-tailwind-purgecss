@@ -1,10 +1,10 @@
-# Laravel 8 VueTailwindPurgeCSS
+# Laravel Vue Tailwind PurgeCSS
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ava-cn/laravel-vue-tailwind-purgecss.svg?style=flat-square)](https://packagist.org/packages/ava-cn/laravel-vue-tailwind-purgecss)
 [![Total Downloads](https://img.shields.io/packagist/dt/ava-cn/laravel-vue-tailwind-purgecss.svg?style=flat-square)](https://packagist.org/packages/ava-cn/laravel-vue-tailwind-purgecss)
 
 
-A simple way to install Vue, Tailwind and PurgeCSS in Laravel 8 projects without `laravel/ui:3.0` or `Jetstream`.
+A simple way to install Vue, Tailwind and PurgeCSS in Laravel projects without `laravel/ui:3.0` or `Jetstream`.
 
 **What it includes:**
 - [Vue.js](https://vuejs.org/)
