@@ -4,7 +4,7 @@ All notable changes to `laravel-vue-tailwind-purgecss` will be documented in thi
 
 ## 0.3.1
 
-- change readme support laravel
+- change readme support laravel ^5.8, ^6.0, ^7.0 and ^8.0
 
 ## 0.3.0
 
