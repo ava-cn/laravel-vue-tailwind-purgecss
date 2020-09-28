@@ -1,27 +1,28 @@
 {
-    "name": "carloosolrac/laravel-vue-tailwind-purgecss",
+    "name": "ava-cn/laravel-vue-tailwind-purgecss",
     "description": "A simple way to install Vue, Tailwind and PurgeCSS",
     "keywords": [
-        "carloosolrac",
+        "ava-cn",
+        "curder",
         "laravel-vue-tailwind-purgecss"
     ],
-    "homepage": "https://github.com/carloosolrac/laravel-vue-tailwind-purgecss",
+    "homepage": "https://github.com/ava-cn/laravel-vue-tailwind-purgecss",
     "license": "MIT",
     "authors": [
         {
-            "name": "Carloosolrac",
-            "email": "carlos@solrac.cl",
-            "homepage": "https://www.solrac.cl",
+            "name": "curder",
+            "email": "q.curder@gmail.com",
+            "homepage": "https://github.com/curder",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4",
-        "illuminate/contracts": "^8.0"
+        "php": "^7.1",
+        "illuminate/contracts": "^5.6|^8.0"
     },
     "autoload": {
         "psr-4": {
-            "Carloosolrac\\LaravelVTP\\": "src"
+            "AvaCN\\LaravelVTP\\": "src"
         }
     },
     "config": {
@@ -30,7 +31,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Carloosolrac\\LaravelVTP\\LaravelVTPServiceProvider"
+                "AvaCN\\LaravelVTP\\LaravelVTPServiceProvider"
             ]
         }
     },

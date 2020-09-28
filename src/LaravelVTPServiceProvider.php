@@ -1,9 +1,9 @@
 <?php
 
-namespace Carloosolrac\LaravelVTP;
+namespace AvaCN\LaravelVTP;
 
 use Illuminate\Support\ServiceProvider;
-use Carloosolrac\LaravelVTP\Commands\PresetCommand;
+use AvaCN\LaravelVTP\Commands\PresetCommand;
 
 class LaravelVTPServiceProvider extends ServiceProvider
 {

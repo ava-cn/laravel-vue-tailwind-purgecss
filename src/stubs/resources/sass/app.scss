@@ -2,9 +2,9 @@
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
-@import './customComponents.css';
+@import './customComponents.scss';
 /* purgecss end ignore */
 
 @import "tailwindcss/utilities";
-@import './customUtilities.css';
+@import './customUtilities.scss';
 

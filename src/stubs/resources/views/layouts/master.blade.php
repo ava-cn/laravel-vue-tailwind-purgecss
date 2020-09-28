@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="blah blah">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="renderer" content="webkit"/>
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        @yield('meta')
         <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>@yield('title', config('app.name'))</title>
+        <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+        <script src="{{ asset(mix('js/jquery.min.js')) }}"></script>
+        @yield('meta-end')
     </head>
-
     <body>
-
+        @yield('body-start')
         <div class="flex flex-col min-h-screen" id="app">
             <header class="flex items-center justify-between bg-gray-900 shadow-lg">
                 <div class="flex justify-between w-full px-4 py-2 sm:w-48">
@@ -38,7 +41,7 @@
                     </div>
                 </nav>
             </header>
-    
+
             <div class="flex-1 h-full bg-gray-400">
                 @yield('content')
             </div>
@@ -49,7 +52,11 @@
                 </div>
             </footer>
         </div>
-
+        @include('partials.statistics')
+        <script src="{{ mix('js/manifest.js') }}"></script>
+        <script src="{{ mix('js/vendor.js') }}"></script>
         <script src="{{ mix('js/app.js') }}"></script>
+        @yield('body-scripts')
+        @yield('body-end')
     </body>
 </html>

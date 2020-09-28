@@ -1,7 +1,7 @@
 # Laravel 8 VueTailwindPurgeCSS
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/carloosolrac/laravel-vue-tailwind-purgecss.svg?style=flat-square)](https://packagist.org/packages/carloosolrac/laravel-vue-tailwind-purgecss)
-[![Total Downloads](https://img.shields.io/packagist/dt/carloosolrac/laravel-vue-tailwind-purgecss.svg?style=flat-square)](https://packagist.org/packages/carloosolrac/laravel-vue-tailwind-purgecss)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ava-cn/laravel-vue-tailwind-purgecss.svg?style=flat-square)](https://packagist.org/packages/ava-cn/laravel-vue-tailwind-purgecss)
+[![Total Downloads](https://img.shields.io/packagist/dt/ava-cn/laravel-vue-tailwind-purgecss.svg?style=flat-square)](https://packagist.org/packages/ava-cn/laravel-vue-tailwind-purgecss)
 
 
 A simple way to install Vue, Tailwind and PurgeCSS in Laravel 8 projects without `laravel/ui:3.0` or `Jetstream`.
@@ -12,18 +12,17 @@ A simple way to install Vue, Tailwind and PurgeCSS in Laravel 8 projects without
 - [Purgecss](https://www.purgecss.com/), by [spatie/laravel-mix-purgecss](https://github.com/spatie/laravel-mix-purgecss)
 
 **Additionals:**
-- [postcss-nesting](https://github.com/jonathantneal/postcss-nesting) 
 - `ExampleComponent` is back!
-- Replaces the `welcome.blade.php` template with one that extends the main layout `layouts/app.blade.php`
+- Replaces the `welcome.blade.php` template with one that extends the main layout `layouts/master.blade.php`
 - Two CSS files for custom components and custom utilities, **don't be afraid to extend it!**
 - `Webpack.mix.js` configured just the way I like it.
 
 ## Installation
 
-You can install the package via composer in your fresh Laravel 8 project:
+You can install the package via composer in your fresh Laravel project:
 
 ```bash
-composer require carloosolrac/laravel-vue-tailwind-purgecss
+composer require ava-cn/laravel-vue-tailwind-purgecss
 ```
 
 ## Usage
@@ -34,11 +33,11 @@ After you install it, just execute this command.
 php artisan preset:vtp
 ```
 
-> :warning: This command delete some foldes, replaces some files and edit another ones. **Use it with precaution** 
+> :warning: This command delete some foldes, replaces some files and edit another ones. **Use it with precaution**
 
 Then, you need install npm dependencies and create the Tailwind config file.
 
-```bash 
+```bash
 npm install && npx tailwind init && npm run dev
 ```
 
@@ -51,6 +50,10 @@ npm install && npx tailwind init --full && npm run dev
 ## Uninstall
 
 When you complete the instalation, configuration you can remove this packages from you project as well.
+
+```
+composer remove ava-cn/laravel-vue-tailwind-purgecss -vvv
+```
 
 ## Changelog
 

@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
-    <div class="container mx-auto">
-        <Example-Component></Example-Component>
+    <div class="mt-24 container mx-auto">
+        <example-component></example-component>
     </div>
 @endsection

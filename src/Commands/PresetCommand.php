@@ -1,7 +1,8 @@
 <?php
 
-namespace Carloosolrac\LaravelVTP\Commands;
+namespace AvaCN\LaravelVTP\Commands;
 
+use Illuminate\Support\Arr;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;
@@ -52,13 +53,21 @@ class PresetCommand extends Command
 
     private function updatePackageArray(array $packages)
     {
-        return array_merge([
+        return [
+            'resolve-url-loader' => '^2.3.1',
+            'sass' => '^1.20.1',
+            'sass-loader' => '^8.0.0',
             'vue' => '^2.6.12',
+            "vue-template-compiler" => "^2.6.12",
             'tailwindcss' => '^1.8.10',
-            'laravel-mix-purgecss' => '^5.0.0',
-            'postcss-import' => '^12.0.1',
-            'postcss-nesting' => '^7.0.1',
-        ], $packages);
+            'laravel-mix' => '^5.0.5',
+            'laravel-mix-tailwind' => '^0.1.0',
+            'laravel-mix-purgecss' => '^5.0.0'
+        ] + Arr::except($packages, [
+            'bootstrap',
+            'popper.js',
+            'laravel-mix',
+        ]);
     }
 
     private function updateWebpack()
@@ -84,14 +93,14 @@ class PresetCommand extends Command
     private function updateCss()
     {
         tap(new Filesystem, function ($files) {
-            if (!$files->isDirectory($directory = resource_path('css'))) {
+            if (!$files->isDirectory($directory = resource_path('sass'))) {
                 $files->makeDirectory($directory, 0755, true);
             }
         });
 
-        copy(__DIR__ . '/../stubs/resources/css/app.css', resource_path('css/app.css'));
-        copy(__DIR__ . '/../stubs/resources/css/customComponents.css', resource_path('css/customComponents.css'));
-        copy(__DIR__ . '/../stubs/resources/css/customUtilities.css', resource_path('css/customUtilities.css'));
+        copy(__DIR__ . '/../stubs/resources/sass/app.scss', resource_path('sass/app.scss'));
+        copy(__DIR__ . '/../stubs/resources/sass/customComponents.scss', resource_path('sass/customComponents.scss'));
+        copy(__DIR__ . '/../stubs/resources/sass/customUtilities.scss', resource_path('sass/customUtilities.scss'));
     }
 
     private function updateJS()
