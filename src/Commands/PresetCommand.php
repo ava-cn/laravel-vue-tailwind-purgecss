@@ -62,7 +62,8 @@ class PresetCommand extends Command
             'tailwindcss' => '^1.8.10',
             'laravel-mix' => '^5.0.5',
             'laravel-mix-tailwind' => '^0.1.0',
-            'laravel-mix-purgecss' => '^4.0.0'
+            'laravel-mix-purgecss' => '^4.0.0',
+	    'jquery' => '^3.4.1',
         ] + Arr::except($packages, [
             'bootstrap',
             'popper.js',
