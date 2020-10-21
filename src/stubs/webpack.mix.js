@@ -13,7 +13,7 @@ mix.sass('resources/sass/app.scss', 'public/css')
 // purgeCSS
 mix.purgeCss({
       enabled: mix.inProduction(),
-      folders: ['src', 'templates'],
+      folders: ['resources'],
       extensions: ['html', 'js', 'php', 'vue'],
   });
 
