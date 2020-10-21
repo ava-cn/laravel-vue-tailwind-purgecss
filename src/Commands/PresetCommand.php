@@ -79,6 +79,7 @@ class PresetCommand extends Command
     private function removeStuffs()
     {
         tap(new Filesystem, function ($files) {
+            $files->deleteDirectory(resource_path('css'));
             $files->deleteDirectory(resource_path('sass'));
             $files->delete(public_path('js/app.js'));
             $files->delete(public_path('css/app.css'));
